@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name= "day">#02B1FF</color>
+    <color name= "night">#48049C</color>
+
     <color name="backgroundColor">#FFFBF9F9</color>
     <color name="itemBackgroundColor">#FFFFFFFF</color>
     <color name="textColor">#FF797979</color>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ge.nlatsabidze.gallery.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="ge.nlatsabidze.gallery.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="ge.nlatsabidze.gallery.movies.CountryFragment"
+        android:label="country_fragment"
+        tools:layout="@layout/country_fragment" >
+        <action
+            android:id="@+id/action_countryFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ge.nlatsabidze.gallery.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_countryFragment"
+            app:destination="@id/countryFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_airPolutionFragment"
+            app:destination="@id/airPolutionFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_dailyInfoFragment"
+            app:destination="@id/dailyInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/airPolutionFragment"
+        android:name="ge.nlatsabidze.gallery.airPolution.AirPolutionFragment"
+        android:label="fragment_air_polution"
+        tools:layout="@layout/fragment_air_polution" />
+    <fragment
+        android:id="@+id/dailyInfoFragment"
+        android:name="ge.nlatsabidze.gallery.dailyFragment.DailyInfoFragment"
+        android:label="fragment_daily_info"
+        tools:layout="@layout/fragment_daily_info" />
+
+</navigation>
